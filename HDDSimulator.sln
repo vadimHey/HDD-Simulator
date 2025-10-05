@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HDDSimulator", "HDDSimulator.csproj", "{1FAA3508-5D2C-4E44-86E2-65F53A5AACC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FAA3508-5D2C-4E44-86E2-65F53A5AACC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FAA3508-5D2C-4E44-86E2-65F53A5AACC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FAA3508-5D2C-4E44-86E2-65F53A5AACC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FAA3508-5D2C-4E44-86E2-65F53A5AACC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8361D235-8B0D-495E-B8DA-C05F3A132FB0}
+	EndGlobalSection
+EndGlobal
