@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" Margin="0 10">
-            <TextBlock Text="Кол-во цилиндров:" Width="200" VerticalAlignment="Center"/>
+            <TextBlock Text="Количество цилиндров:" Width="200" VerticalAlignment="Center"/>
             <TextBox x:Name="CylinderCountBox" Width="120" Text="50"/>
         </StackPanel>
 
