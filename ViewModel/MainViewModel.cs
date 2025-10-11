@@ -32,12 +32,15 @@ namespace HDDSimulator.ViewModel
         private readonly DispatcherTimer _timer;
         private readonly Random _random = new();
 
+        public ICommand StartCommand { get; }
         public ICommand StopCommand { get; }
+
         public MainViewModel()
         {
             _timer = new DispatcherTimer();
             _timer.Tick += Timer_Tick;
 
+            StartCommand = new RelayCommand(_ => OpenSettingsWindow());
             StopCommand = new RelayCommand(_ => StopSimulation(), _ => _timer != null && _timer.IsEnabled);
         }
 
@@ -70,6 +73,24 @@ namespace HDDSimulator.ViewModel
             (StopCommand as RelayCommand)?.RaiseCanExecuteChanged();
         }
 
+        // Открытие окна настроек
+        private void OpenSettingsWindow()
+        {
+            var settingsWindow = new SettingsWindow();
+            bool? result = settingsWindow.ShowDialog();
+
+            if (result == true)
+            {
+                StartSimulation(
+                    settingsWindow.CylinderCount,
+                    settingsWindow.HeadMoveTime,
+                    settingsWindow.NewRequestProbability,
+                    settingsWindow.InitialRequests
+                );
+            }
+        }
+
+        // Остановка симуляции
         public void StopSimulation()
         {
             if (_timer.IsEnabled)
