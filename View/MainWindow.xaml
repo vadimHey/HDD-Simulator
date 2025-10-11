@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:HDDSimulator.ViewModel"
         mc:Ignorable="d"
-        Title="HDDSimulator" Height="450" Width="1300">
+        Title="HDDSimulator" Height="450" Width="1324">
 
     <Window.DataContext>
         <vm:MainViewModel />
@@ -13,7 +13,7 @@
 
     <DockPanel Margin="10">
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0 0 0 10">
-            <Button Content="Запуск" Width="70" Margin="10 0 10 0" Click="StartButton_Click"></Button>
+            <Button Content="Запуск" Width="70" Margin="10 0 10 0" Command="{Binding StartCommand}"></Button>
             <Button Content="Стоп" Width="70" Margin="10 0 10 0" Command="{Binding StopCommand}"></Button>
             <TextBlock Text="Текущая позиция головки: " 
                        FontWeight="Bold" FontSize="14" />
